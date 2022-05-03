@@ -2,6 +2,30 @@
     color: var(--main-dark-color);    
     }
 
+.navigation-list, .contact-header{
+    display: none;
+}
+
+.header {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-line-color);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger-menu-link:hover .burger-menu,
+.burger-menu-link:focus .burger-menu{
+fill: var(--brand-color);
+}
+
+@media screen and (min-width: 1600px) {
+.burger-menu-link{
+    display: none;
+}
 .header{
         padding: 24px 0;
         border-bottom: 1px solid var(--border-line-color);
@@ -95,3 +119,4 @@ nav .current-link{
         fill: var(--brand-color);
         }
     }
+}
