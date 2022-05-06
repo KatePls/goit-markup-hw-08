@@ -51,21 +51,30 @@ img {
 }
 
 .container {
-  padding: 0 15px;
+  width: 480px;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* .container{
-    width: 1200px;
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
     padding: 0 15px;
-    margin-right: auto;
-    margin-left: auto;
-    }  
-    
-.section{
+  }
+  .section {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+  .section {
     padding: 94px 0;
-    } */
+  }
+}
+
 .logo {
   font-family: var(--additional-font-family);
   font-weight: bold;
@@ -301,6 +310,7 @@ img {
 }
 
 .header {
+  position: relative;
   padding: 15px 0;
   border-bottom: 1px solid var(--border-line-color);
 }
@@ -311,22 +321,86 @@ img {
   justify-content: space-between;
 }
 
-.burger-menu-link:hover .burger-menu,
-.burger-menu-link:focus .burger-menu {
+.mobile-menu-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.mobile-menu-btn__icon {
+  fill: #000;
+}
+
+.mobile-menu-btn:focus .mobile-menu-btn__icon,
+.mobile-menu-btn:hover .mobile-menu-btn__icon {
   fill: var(--brand-color);
 }
 
-@media screen and (min-width: 1600px) {
-  .burger-menu-link {
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: aqua;
+}
+
+.mobile-menu_container {
+  position: relative;
+  padding: 48px 40px;
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.mobile-menu__close-icon {
+  fill: var(--main-dark-color);
+}
+
+.mobile-menu__close-btn:focus .mobile-menu__close-icon,
+.mobile-menu__close-btn:hover .mobile-menu__close-icon {
+  fill: var(--brand-color);
+}
+
+.mobile-menu____link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--main-dark-color);
+}
+
+.mobile-menu____link:focus, .mobile-menu____link:hover {
+  color: var(--brand-color);
+}
+
+.mobile-menu__navigation-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-btn,
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile-menu-btn,
+  .mobile-menu {
     display: none;
   }
   .header {
     padding: 24px 0;
-    border-bottom: 1px solid var(--border-line-color);
-  }
-  .header-container {
-    display: flex;
-    justify-content: space-between;
   }
   .navigation {
     display: flex;
@@ -374,11 +448,11 @@ img {
   .navigation-list__item:not(:last-child) {
     margin-right: 50px;
   }
-  nav .current-link {
+  .current-link {
     color: var(--brand-color);
     position: relative;
   }
-  nav .current-link::after {
+  .current-link::after {
     content: "";
     display: block;
     background-color: var(--brand-color);
