@@ -1,17 +1,17 @@
-.footer{
+.footer {
     padding: 60px 0;
     background-color: var(--backgr-color);
-    }
-
-.footer-list{
-    display: flex;
-    }
+    text-align: center;
+}
 
 .footer-adress{
-    margin-top: 20px;
-    }
+   margin-top: 20px;
+}
+.footer-contacts, .footer-social{
+   margin-bottom: 60px;
+}
 
-.footer-adress__contact{
+.footer-adress__contact {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -21,39 +21,34 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--main-medium-color-opacity);
-    
+
     &:hover,
     &:focus {
-        color: var(--brand-color);
+    color: var(--brand-color);
     }
 
     &:first-child {
-        margin-bottom: 9px;
-        }
+    margin-bottom: 8px;
     }
+}
 
-.footer-adress__contact-map{
+.footer-adress__contact-map {
     @extend .footer-adress__contact;
     color: var(--main-light-color);
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
     &:hover,
     &:focus {
-        color: var(--brand-color);
-        }
+    color: var(--brand-color);
     }
+}
 
-.footer-adress__contact-item:not(:last-child){
-    margin-bottom: 9px;
-    }
+.footer-adress__contact-item:not(:last-child) {
+    margin-bottom: 8px;
+}
 
-.footer-left{
-    margin-right: 70px;
-    }
-
-.footer-center__social-title,
-.footer-right__social-title{
-    margin-top: 12px;
+.footer-social__title,
+.footer-subscription__social-title {
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 14px;
@@ -61,13 +56,16 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-light-color);
-    }
-    
-.footer-center__social-list{
-    display: flex;
-    }
+}
 
-.footer-center__social-link{
+.footer-social__list {
+    display: flex;
+    justify-content: center;
+}
+.footer-social__item:not(:last-child){
+    margin-right: 10px;
+}
+.footer-social__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,36 +77,22 @@
     transition-property: bacground-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
-    &:hover, 
-    &:focus{     
-        background-color: var(--brand-color);
-        }
-    }
 
-.footer-center__social-item:not(:last-child){
-    margin-right: 10px;
+    &:hover,
+    &:focus {
+    background-color: var(--brand-color);
     }
-
-.footer-center__social-icon {
+}
+.footer-social__icon {
     fill: var(--main-light-color, #F5F4FA);
-    }
+}
 
-.footer-center{
-    margin-right: 93px;
-    }
-
-.footer-right__form-subscription{
-    display: flex;
-    }
-
-.footer-right__input-subscription{
-    width: 358px;
+.footer-subscription__input {
+    min-width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    margin-right: 12px;
     padding: 15px 16px 15px;
     background: transparent;
     font-size: 16px;
@@ -116,17 +100,79 @@
     letter-spacing: 0.03em;
     color: var(--main-light-color);
     outline: none;
-    }
-    
-.footer-right__btn{
+    margin-bottom: 20px;
+}
+
+.footer-subscription__btn {
     @extend .button;
     display: flex;
     align-items: center;
     padding-left: 28px;
     padding-right: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer-subscription__btn-icon {
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+.sub-footer{
+display: flex;
+justify-content: space-between;
+}
+
+.footer-contacts{
+margin-left: 61px;
+}
+.footer-social{
+margin-top: 5px;
+margin-right: 74px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.footer-list{
+    display: flex;
+    justify-content: space-between;
+    }
+.footer-contacts {
+    margin-left: 0;
+    margin-right: 70px;
     }
 
-.footer-right__btn-icon{
-    margin-left: 10px;
+.footer-adress__contact-item:not(:last-child){
+    margin-bottom: 9px;
     }
+
+.footer-center__social-icon {
+    fill: var(--main-light-color, #F5F4FA);
+    }
+
+.footer-social{
+    margin-top: 12px;
+    margin-right: 93px;
+    }
+
+.footer-social__title,
+.footer-subscription__social-title,
+.footer-contacts {
+text-align: left;
+}
+
+.footer-subscription{
+    margin-top: 12px;
+}
+.footer-subscription__form {
+    display: flex;
+}
+.footer-subscription__input{
+    min-width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+}
+}
     
