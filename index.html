@@ -46,16 +46,16 @@
         </a>
       </li>
     </ul>
-    <button type="button" class="mobile-menu-btn">
+    <button type="button" class="mobile-menu-btn" data-menu-open>
       <svg class="mobile-menu-btn__icon" width="40" height="40">
         <use href="./images/icons.svg#icon-menu"></use>
       </svg>
     </button>    
   </div>
 
-  <div class="mobile-menu">
+  <div class="mobile-menu" data-menu>
     <div class="container mobile-menu_container">
-        <button type="button" class="mobile-menu__close-btn" data-modal-close>
+        <button type="button" class="mobile-menu__close-btn" data-menu-close>
            <svg class="mobile-menu__close-icon" width="40" height="40">
            <use href="./images/icons.svg#icon-close-black"></use>
            </svg>
@@ -84,16 +84,24 @@
           </li>
         </ul>
         <ul class="mobile-menu__social-list">
-          <li class="mobile-menu__social-item">Instagram</li>
-          <li class="mobile-menu__social-item">Twitter</li>
-          <li class="mobile-menu__social-item">Facebook</li>
-          <li class="mobile-menu__social-item">LinkedIn</li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link">Instagram</a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link">Twitter</a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link">Facebook</a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link">LinkedIn</a>
+          </li>
         </ul>
     </div>    
   </div>
 </header>
 
- <main>
+<main>
   <section class="hero">
     <div class="container">
     <h1 class="hero__title">Эффективные решения <br> для вашего бизнеса</h1>
@@ -101,10 +109,10 @@
     </div>
   </section>
 
-<!-- <section class="section about-our-work">
+<section class="section about-our-work">
     <div class="container about">
       <ul class="about__list-description">
-        <li>
+        <li class="about__item-description">
           <div class="about__work-image">
           <svg width="70" height="70"> 
             <use href="./images/icons.svg#icon-antenna"></use>
@@ -113,7 +121,7 @@
           <h3 class="about__description-title">Внимание к деталям</h3>
           <p class="about__description">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
         </li>
-        <li>
+        <li class="about__item-description">
           <div class="about__work-image">
             <svg width="70" height="70"> 
               <use href="./images/icons.svg#icon-clock"></use>
@@ -122,7 +130,7 @@
           <h3 class="about__description-title">Пунктуальность</h3>
           <p class="about__description">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
         </li>
-        <li>
+        <li class="about__item-description">
           <div class="about__work-image">
             <svg width="70" height="70"> 
               <use href="./images/icons.svg#icon-diagram"></use>
@@ -131,7 +139,7 @@
           <h3 class="about__description-title">Планирование</h3>
           <p class="about__description">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
         </li>
-        <li>
+        <li class="about__item-description">
           <div class="about__work-image">
             <svg width="70" height="70"> 
               <use href="./images/icons.svg#icon-astronaut"></use>
@@ -159,12 +167,12 @@
     </div>
   </section>
   
-  <section class="section team">
+ <section class="section team">
     <div class="container">
       <h2 class="team__title">Наша команда</h2>
       <ul class="team__list">
         <li class="team__item">
-          <img src="./images/photo1.jpg" alt="Photo of Product Designer" width="270">
+          <img src="./images/photo1.jpg" alt="Photo of Product Designer" width="450">
           <div class="team__name-wrapper"> 
             <h3 class="team__name">Игорь Демьяненко</h3>
             <p class="team__position">Product Designer</p>
@@ -201,7 +209,7 @@
           </div>
         </li>
         <li class="team__item">
-          <img src="./images/photo2.jpg" alt="Photo of Frontend Developer" width="270">
+          <img src="./images/photo2.jpg" alt="Photo of Frontend Developer" width="450">
           <div class="team__name-wrapper">
             <h3 class="team__name">Ольга Репина</h3>
             <p class="team__position">Frontend Developer</p>
@@ -238,7 +246,7 @@
           </div>
         </li>
         <li class="team__item">
-          <img src="./images/photo3.jpg" alt="Photo of Marketing" width="270">
+          <img src="./images/photo3.jpg" alt="Photo of Marketing" width="450">
           <div class="team__name-wrapper">
             <h3 class="team__name">Николай Тарасов</h3>
             <p class="team__position">Marketing</p>
@@ -275,7 +283,7 @@
           </div>
         </li>
         <li class="team__item">
-          <img src="./images/photo4.jpg" alt="Photo of UI Designer" width="270">
+          <img src="./images/photo4.jpg" alt="Photo of UI Designer" width="450">
           <div class="team__name-wrapper">
             <h3 class="team__name">Михаил Ермаков</h3>
             <p class="team__position">UI Designer</p>
@@ -365,7 +373,7 @@
   </div>
 </section>  
 </main>
- 
+<!--   
 <footer class="footer" id="contacts">
   <div class="container footer-list">
     <div class="footer-left">
@@ -502,6 +510,7 @@
   </div>
 </div> -->
 
+<script src="./js/menu.js"></script>
 <script src="./js/modal.js"></script>
 </body>
 </html>
