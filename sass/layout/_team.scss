@@ -1,4 +1,5 @@
 .team {
+    min-width: 480px;
     background-color: var(--backgr-color-section);
 }
 
@@ -75,12 +76,18 @@
 }
 
 @media screen and (min-width: 768px) {
-.team__item{
-    width: 354px;
-}
 .team__list {
 display: flex;
- flex-wrap: wrap;
+flex-wrap: wrap;
+margin-left: -30px;
+margin-top: -30px;
+padding: 0;
+}
+.team__item {
+width: 354px;
+margin-left: 30px;
+margin-top: 30px;
+flex-basis: calc((100% - 60px) / 2);
 }
 }
 
@@ -93,5 +100,8 @@ margin-bottom: 50px;
 
 .team__list {
     justify-content: space-between;
+}
+.team__item {
+    flex-basis: unset;
 }
 }
