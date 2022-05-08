@@ -24,6 +24,9 @@
 
 .mobile-menu-btn__icon{
     fill: #000;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     .mobile-menu-btn:focus &,
     .mobile-menu-btn:hover &{
@@ -42,6 +45,10 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition-property: opacity;
+    transition-property: visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &.is-open {
         opacity: 1;
