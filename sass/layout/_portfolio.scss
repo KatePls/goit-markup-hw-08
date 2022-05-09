@@ -3,6 +3,9 @@
     flex-wrap: wrap;
     margin-bottom: 40px;
     }
+.portfolio-list__img{
+width: 100%;
+}
 
 .portfolio-buttons__item:not(:last-child) {
     margin-right: 8px;
@@ -98,6 +101,10 @@ margin-bottom: 30px;
         transform: translateY(0%);    
         }
     }
+
+@media screen and (min-width: 480px) {
+   
+}
 
 
 @media screen and (min-width: 768px) {

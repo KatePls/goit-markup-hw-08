@@ -1213,6 +1213,10 @@ img {
   margin-bottom: 40px;
 }
 
+.portfolio-list__img {
+  width: 100%;
+}
+
 .portfolio-buttons__item:not(:last-child) {
   margin-right: 8px;
 }
