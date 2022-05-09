@@ -4,6 +4,7 @@
 
 .header {
     position: relative;
+    width: 100%;
     padding: 15px 0;
     border-bottom: 1px solid var(--border-line-color);
 }
@@ -218,7 +219,7 @@ padding: 48px 40px;
 
 .navigation-list__item:not(:last-child){
     margin-right: 50px;
-    }
+}
 
 .contact-header__item:not(:last-child){
 margin-bottom: 10px;
@@ -238,7 +239,7 @@ margin-bottom: 10px;
 
     &:hover,
     &:focus {
-        color: var(--brand-color);
+    color: var(--brand-color);
     }
 }
 
@@ -255,12 +256,12 @@ margin-bottom: 10px;
 
 
 @media screen and (min-width: 1200px) {
-    .header {
-        padding: 24px 0;
+.header {
+    padding: 24px 0;
     }
     
-    .navigation-list {
-        margin-left: 93px;
+.navigation-list {
+    margin-left: 93px;
     }
        
 .contact-header {
@@ -268,7 +269,7 @@ margin-bottom: 10px;
 }
 
 .contact-header__item:not(:last-child){
-margin-right: 20px;
+margin-right: 30px;
 margin-bottom: 0;
 }
 }

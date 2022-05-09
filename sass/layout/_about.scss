@@ -1,15 +1,14 @@
 .about__list-description{
-    min-width: 450px;
+max-width: 450px;
 }
 
 .about__work-image{
-width: 450px;
+text-align: center;
 height: 120px;
-padding: 25px 190px;
+padding-top: 25px;
+padding-bottom: 25px;
 margin-bottom: 30px; 
 background-color: var(--backgr-color-section);
-margin-right: auto;
-margin-left: auto;
 }
 
 .about__description-title {
@@ -32,11 +31,24 @@ margin-bottom: 30px;
 max-width: 450px;
 margin-right: auto;
 }
-
+  
 @media screen and (max-width:1199px) {
   .about__title, .about__img-list{
       display: none;
   }
+}
+
+@media screen and (min-width: 480px) {
+.about__list-description {
+    max-width: 768px;
+}
+.about__work-image {
+    max-width: 450px;
+    height: 120px;
+    padding: 25px 190px;
+    margin-bottom: 30px;
+    background-color: var(--backgr-color-section);
+    }
 }
 
 @media screen and (min-width: 768px) {

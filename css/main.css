@@ -51,7 +51,7 @@ img {
 }
 
 .container {
-  width: 480px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding: 0 15px;
@@ -59,6 +59,12 @@ img {
 
 .section {
   padding: 60px 0;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -333,6 +339,7 @@ img {
 
 .header {
   position: relative;
+  width: 100%;
   padding: 15px 0;
   border-bottom: 1px solid var(--border-line-color);
 }
@@ -581,13 +588,13 @@ img {
     display: flex;
   }
   .contact-header__item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 30px;
     margin-bottom: 0;
   }
 }
 
 .hero {
-  min-width: 480px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 118px 0;
   text-align: center;
@@ -617,8 +624,22 @@ img {
   padding: 10px 32px;
 }
 
+@media screen and (min-width: 480px) {
+  .hero {
+    max-width: 767px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero-tablet1x.jpg");
+  }
+}
+
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero-tablet2x.jpg");
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
+    max-width: 1200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero-tablet1x.jpg");
   }
 }
@@ -651,17 +672,16 @@ img {
 }
 
 .about__list-description {
-  min-width: 450px;
+  max-width: 450px;
 }
 
 .about__work-image {
-  width: 450px;
+  text-align: center;
   height: 120px;
-  padding: 25px 190px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 30px;
   background-color: var(--backgr-color-section);
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .about__description-title {
@@ -688,6 +708,19 @@ img {
 @media screen and (max-width: 1199px) {
   .about__title, .about__img-list {
     display: none;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .about__list-description {
+    max-width: 768px;
+  }
+  .about__work-image {
+    max-width: 450px;
+    height: 120px;
+    padding: 25px 190px;
+    margin-bottom: 30px;
+    background-color: var(--backgr-color-section);
   }
 }
 
@@ -806,8 +839,11 @@ img {
 }
 
 .team {
-  min-width: 480px;
   background-color: var(--backgr-color-section);
+}
+
+.team__picture {
+  width: 100%;
 }
 
 .team__item {
@@ -882,6 +918,12 @@ img {
   fill: var(--main-light-color);
 }
 
+@media screen and (min-width: 480px) {
+  .team {
+    min-width: 480px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team__list {
     display: flex;
@@ -894,7 +936,7 @@ img {
     margin-bottom: 0;
   }
   .team__item {
-    width: 354px;
+    /*min-width: 354px;*/
     margin-left: 30px;
     margin-top: 30px;
     flex-basis: calc((100% - 60px) / 2);
@@ -939,7 +981,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 210px;
+  width: 100%;
   height: 92px;
   border: 1px solid var(--color-svg);
   border-radius: 4px;
@@ -950,6 +992,12 @@ img {
 
 .clients__item-link:hover, .clients__item-link:focus {
   border: 1px solid var(--brand-color);
+}
+
+@media screen and (min-width: 480px) {
+  .clients__item-link {
+    width: 210px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -976,7 +1024,7 @@ img {
 }
 
 .footer {
-  min-width: 480px;
+  width: 100%;
   padding: 60px 0;
   background-color: var(--backgr-color);
   text-align: center;
@@ -1066,7 +1114,7 @@ img {
 }
 
 .footer-subscription__input {
-  min-width: 450px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1096,10 +1144,19 @@ img {
   margin-left: 10px;
 }
 
+@media screen and (min-width: 480px) {
+  .footer-subscription__input {
+    min-width: 450px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .sub-footer {
     display: flex;
     justify-content: space-between;
+  }
+  .footer-subscription__input {
+    max-width: 450px;
   }
   .footer-contacts {
     margin-left: 61px;
@@ -1144,6 +1201,9 @@ img {
     min-width: 358px;
     margin-bottom: 0;
     margin-right: 12px;
+  }
+  .footer-contacts, .footer-social {
+    margin-bottom: 0;
   }
 }
 
